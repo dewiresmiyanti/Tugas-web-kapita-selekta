@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jadwal Kerja Praktek</title>
+  <style>
+    body {margin:0; font-family:'Segoe UI',sans-serif; background:#fafafa; color:#333;}
+
+    /* Navbar */
+    nav {
+      background:linear-gradient(120deg,#a2c2e2,#c9a7eb,#f7c1d9);
+      padding:14px;
+      text-align:center;
+      position:sticky;
+      top:0;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color:#fff;
+      margin:0 15px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    nav a:hover {text-decoration:underline; color:#333;}
+
+    .container {
+      max-width:1000px;
+      margin:30px auto;
+      padding:20px;
+    }
+
+    h1 {
+      text-align:center;
+      color:#c9a7eb;
+      margin-bottom:20px;
+    }
+
+    /* Tabel Jadwal */
+    table {
+      width:100%;
+      border-collapse:collapse;
+      margin-top:20px;
+    }
+    table, th, td {
+      border:1px solid #ccc;
+    }
+    th, td {
+      padding:12px;
+      text-align:center;
+    }
+    th {
+      background:linear-gradient(120deg,#a2c2e2,#f7c1d9);
+      color:#fff;
+    }
+    tr:nth-child(even) {
+      background:#f9f9f9;
+    }
+
+    /* Form Pendaftaran */
+    .form-box {
+      margin-top:30px;
+      background:#fff;
+      padding:20px;
+      border-radius:12px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+    .form-box h2 {
+      margin-top:0;
+      color:#a2c2e2;
+    }
+    .form-box label {
+      display:block;
+      margin-top:10px;
+      font-weight:600;
+    }
+    .form-box input, .form-box select {
+      width:100%;
+      padding:10px;
+      margin-top:5px;
+      border-radius:8px;
+      border:1px solid #ccc;
+    }
+    .form-box button {
+      margin-top:15px;
+      padding:10px 20px;
+      background:linear-gradient(120deg,#a2c2e2,#f7c1d9);
+      color:#fff;
+      border:none;
+      border-radius:8px;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+    }
+    .form-box button:hover {
+      background:linear-gradient(120deg,#f7c1d9,#c9a7eb);
+      color:#333;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="materi.html">Materi</a>
+    <a href="jadwal.html">Jadwal KP</a>
+    <a href="seminar.html">Seminar</a>
+  </nav>
+
+  <div class="container">
+    <h1>📅 Jadwal Kerja Praktek</h1>
+
+    <!-- Jadwal KP -->
+    <table id="jadwalTable">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama Mahasiswa</th>
+          <th>NPM</th>
+          <th>Tanggal KP</th>
+          <th>Keterangan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Dewi Resmiyanti</td>
+          <td>2315061045</td>
+          <td>10 Oktober 2025</td>
+          <td>Terjadwal</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Form Daftar KP -->
+    <div class="form-box">
+      <h2>Form Pendaftaran KP</h2>
+      <form id="kpForm">
+        <label>Nama Mahasiswa</label>
+        <input type="text" id="nama" required>
+
+        <label>NPM</label>
+        <input type="text" id="npm" required>
+
+        <label>Pilih Tanggal KP</label>
+        <input type="date" id="tanggal" required>
+
+        <button type="submit">Daftar</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("kpForm");
+    const table = document.getElementById("jadwalTable").getElementsByTagName('tbody')[0];
+
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+
+      let nama = document.getElementById("nama").value;
+      let npm = document.getElementById("npm").value;
+      let tanggal = document.getElementById("tanggal").value;
+
+      let newRow = table.insertRow();
+      let cell1 = newRow.insertCell(0);
+      let cell2 = newRow.insertCell(1);
+      let cell3 = newRow.insertCell(2);
+      let cell4 = newRow.insertCell(3);
+      let cell5 = newRow.insertCell(4);
+
+      cell1.innerHTML = table.rows.length; // nomor otomatis
+      cell2.innerHTML = nama;
+      cell3.innerHTML = npm;
+      cell4.innerHTML = new Date(tanggal).toLocaleDateString('id-ID', {
+        day: 'numeric', month: 'long', year: 'numeric'
+      });
+      cell5.innerHTML = "Terjadwal";
+
+      form.reset();
+      alert("Pendaftaran berhasil! Jadwal Anda sudah ditambahkan ✅");
+    });
+  </script>
+</body>
+</html>

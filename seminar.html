@@ -1,0 +1,145 @@
+<!doctype html> 
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dewi Resmiyanti — Home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hero Section */
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(120deg, #a3c9e2, #f9d5d3);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+      animation: slideDown 1.5s ease;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 12px;
+      animation: fadeUp 2s ease;
+    }
+    .hero a.btn-main {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #fff;
+      color: #333;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .hero a.btn-main:hover {
+      background: #333;
+      color: #fff;
+    }
+
+    /* Animasi */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes slideDown {
+      from {transform: translateY(-50px); opacity:0;}
+      to {transform: translateY(0); opacity:1;}
+    }
+    @keyframes fadeUp {
+      from {transform: translateY(30px); opacity:0;}
+      to {transform: translateY(0); opacity:1;}
+    }
+
+    /* Section bawah */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #a3c9e2;
+    }
+
+    /* Navigasi */
+    nav {
+      background: #a3c9e2; 
+      padding: 12px 20px;
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #f9d5d3;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="materi.html">Materi</a>
+    <a href="jadwal.html">Jadwal KP</a>
+    <a href="seminar.html">Seminar</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Selamat Datang di Website Saya</h1>
+    <p>Saya <b>Dewi Resmiyanti</b> — Mahasiswa Teknik Informatika.<br>
+       Website ini berisi profil diri, materi Kapita Selekta, jadwal KP, dan seminar.</p>
+    <a href="profile.html" class="btn-main">Lihat Profil Saya</a>
+  </section>
+
+  <!-- Feature Section -->
+  <section class="features">
+    <a href="profile.html" class="card">
+      <h3>📌 Profil</h3>
+      <p>Kenali lebih dekat tentang saya: identitas, deskripsi diri, serta kontak yang bisa dihubungi.</p>
+    </a>
+    <a href="materi.html" class="card">
+      <h3>📚 Materi</h3>
+      <p>Kumpulan materi Kapita Selekta, link bacaan tambahan, serta sumber belajar yang relevan.</p>
+    </a>
+    <a href="jadwal.html" class="card">
+      <h3>🗓️ Jadwal KP</h3>
+      <p>Informasi lengkap mengenai jadwal kerja praktek, pembimbing, serta tempat pelaksanaan.</p>
+    </a>
+    <a href="seminar.html" class="card">
+      <h3>🎤 Seminar</h3>
+      <p>Daftar seminar skripsi bersama rekan-rekan, serta topik yang sedang dibahas.</p>
+    </a>
+  </section>
+</body>
+</html>

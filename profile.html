@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profil — Dewi Resmiyanti</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Navbar Style dengan soft pastel warna */
+    nav {
+      background: linear-gradient(90deg, #a2c2e2, #c9a7eb, #f7c1d9);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      border-radius: 0 0 15px 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .profile-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px;
+    }
+    .profile-photo {
+      flex: 1 1 250px;
+      text-align: center;
+    }
+    .profile-photo img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease;
+    }
+    .profile-photo img:hover {
+      transform: scale(1.05);
+    }
+    .profile-info {
+      flex: 2 1 400px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease;
+    }
+    .profile-info h2 {
+      margin-top: 0;
+      color: #c9a7eb; /* ungu pastel */
+      font-size: 2rem;
+    }
+    .profile-info p {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+    .profile-info a {
+      color: #a2c2e2; /* biru pastel */
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .profile-info a:hover {
+      color: #f7a7c1; /* pink lembut saat hover */
+      text-decoration: underline;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="materi.html">Materi</a>
+    <a href="jadwal.html">Jadwal KP</a>
+    <a href="seminar.html">Seminar</a>
+  </nav>
+
+  <div class="profile-container">
+    <!-- Foto -->
+    <div class="profile-photo">
+      <img src="profil.jpg" alt="Foto Dewi Resmiyanti">
+    </div>
+
+    <!-- Info -->
+    <div class="profile-info">
+      <h2>Dewi Resmiyanti</h2>
+      <p><b>NPM:</b> 2315061045</p>
+      <p><b>Kelas:</b> PSTI A</p>
+      <p><b>Jurusan / Program Studi:</b> Teknik Informatika — Rekayasa Perangkat Lunak</p>
+      <p><b>Email:</b> <a href="mailto:dewiresmiyanti34@gmail.com">dewiresmiyanti34@gmail.com</a></p>
+      <p><b>Instagram:</b> <a href="https://instagram.com/djkkm_04" target="_blank">@djkkm_04</a></p>
+      <p><b>Deskripsi Diri:</b> Saya adalah mahasiswa yang memiliki minat besar pada pengembangan sistem berbasis web dan kecerdasan buatan. Fokus saya saat ini adalah mengembangkan kemampuan dalam analisis, desain, serta implementasi sistem informasi yang inovatif dan bermanfaat.</p>
+    </div>
+  </div>
+</body>
+</html>
